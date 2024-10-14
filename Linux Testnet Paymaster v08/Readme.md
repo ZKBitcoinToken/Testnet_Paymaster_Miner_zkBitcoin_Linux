@@ -32,19 +32,19 @@ chmod u+x 1zkBTCMiner.sh  or right click the file -> Properities -> Permissions 
 
 chmod u+x 1zkBTCMiner.sh or right click the file -> Properities -> Permissions and check "Allow executing file as Program"
 
-./1zkBTCMiner.sh
+./1runPayMaster_and_Miner.sh
 
 to run the miner
 
 or
 
-./1zkBTCMiner.sh
+./1zkBTCMiner_No_Paymaster.sh
 
 Mines normally using your eth account to mint the tokens
 
 It should run!
 
-Edit the 1zkBTCMiner.sh file and _zkBitcoinMiner.conf to edit your settings
+Edit the _zkBitcoinMiner.conf file to edit your settings
 
 
 
