@@ -34,7 +34,7 @@ chmod u+x 1zkBTCMiner.sh or right click the file -> Properities -> Permissions a
 
 ./1runPayMaster_and_Miner.sh
 
-to run the miner
+to run the miner with paymaster
 
 or
 
