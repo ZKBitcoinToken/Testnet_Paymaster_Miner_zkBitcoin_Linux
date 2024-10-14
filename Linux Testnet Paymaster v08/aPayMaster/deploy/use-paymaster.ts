@@ -276,7 +276,7 @@ const zkBitcoinABI = [
   return new ethers.Contract(MINTER_ADDRESS, zkBitcoinABI, wallet);
 }
 interface Config {
-  privateKey: sretryMaintring;
+  privateKey: string;
   minerAddress: string;
   contractAddress: string;
   contractAddressPayMaster: string;
