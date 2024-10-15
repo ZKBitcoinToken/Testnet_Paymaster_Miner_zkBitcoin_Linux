@@ -134,4 +134,8 @@ then
     exit 1
 fi
 
-source 1zkBTCMiner.sh
+#source 1zkBTCMiner.sh
+while : ; do
+  dotnet _zkBitcoinMiner.dll
+  [[ $? -eq 22 ]] || break
+done
