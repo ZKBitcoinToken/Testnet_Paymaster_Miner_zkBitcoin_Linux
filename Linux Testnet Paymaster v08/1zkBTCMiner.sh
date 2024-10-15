@@ -25,7 +25,13 @@ else
     echo "dotnet 5.0 is already installed."
 fi
 
-while : ; do
-  dotnet _zkBitcoinMiner.dll
-  [[ $? -eq 22 ]] || break
+
+while true; do
+    dotnet _zkBitcoinMiner.dll
+    if [ $? -eq 22 ]; then
+        continue
+    else
+        break
+    fi
 done
+
