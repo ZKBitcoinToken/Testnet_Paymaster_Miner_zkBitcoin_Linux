@@ -9,10 +9,10 @@ import * as path from 'path';
 import { BigNumber } from 'ethers';
 var _BLOCKS_PER_READJUSTMENT = 64;
 // Put the address of the deployed paymaster here
-var PAYMASTER_ADDRESS = "0xeB4600B4AD660669eBa5B97effC4F706E4B6764D";
+var PAYMASTER_ADDRESS = "0xfFb60eCC5169140D6D96062c283ca63e15CcED81";
 
 // Put the address of the deployed paymaster here
-var MINTER_ADDRESS = "0xeB4600B4AD660669eBa5B97effC4F706E4B6764D";
+var MINTER_ADDRESS = "0xfFb60eCC5169140D6D96062c283ca63e15CcED81";
 // Put the address of the deployed paymaster here
 var Real_Token_address = "0xC298c19a01F5c13d38d7116849bB09cc9646314E";
 var TOKEN_ADDRESS = "0xC298c19a01F5c13d38d7116849bB09cc9646314E";
