@@ -8,8 +8,14 @@ then
     echo "Installing dotnet 5.0..."
 
     # Add Microsoft package signing key and repository
-    wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-    sudo dpkg -i packages-microsoft-prod.deb
+
+    # Get the Ubuntu version
+    ubuntu_version=$(lsb_release -rs)
+
+    # Proceed with the download for the detected Ubuntu version
+    echo "Ubuntu $ubuntu_version detected. Proceeding with the download..."
+    wget https://packages.microsoft.com/config/ubuntu/${ubuntu_version}/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+    sudo dpkg -i packages-microsoft-prod.deb   sudo dpkg -i packages-microsoft-prod.deb
     sudo apt-get update; \
     sudo apt-get install -y apt-transport-https && \
     sudo apt-get update && \
@@ -29,3 +35,4 @@ while : ; do
   dotnet _zkBitcoinMiner.dll UsePayMaster=false
   [[ $? -eq 22 ]] || break
 done
+
