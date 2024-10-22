@@ -15,7 +15,7 @@ then
     # Proceed with the download for the detected Ubuntu version
     echo "Ubuntu $ubuntu_version detected. Proceeding with the download..."
     wget https://packages.microsoft.com/config/ubuntu/${ubuntu_version}/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-    sudo dpkg -i packages-microsoft-prod.deb   sudo dpkg -i packages-microsoft-prod.deb
+    sudo dpkg -i packages-microsoft-prod.deb
     sudo apt-get update; \
     sudo apt-get install -y apt-transport-https && \
     sudo apt-get update && \
