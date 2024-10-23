@@ -35,6 +35,15 @@ else
     echo "dotnet 6.0 is already installed."
 fi
 
+# Path to your JSON file
+JSONFilePath="./_zkBitcoinMiner.conf"
+
+# Check if the JSON file exists
+if [ ! -f "$JSONFilePath" ]; then
+    echo "JSON file not found: $JSONFilePath"
+    exit 1
+fi
+
 # Modify the UsePayMaster field
 sed -i 's/UsePayMaster=true/UsePayMaster=false/g' "$JSONFilePath"
 # Rest of your script...
@@ -43,4 +52,3 @@ while : ; do
   dotnet _zkBitcoinMiner.dll
   [[ $? -eq 22 ]] || break
 done
-
