@@ -7,7 +7,7 @@ fi
 
 
 # Path to your JSON file
-JSONFilePath="./1zkBTCMiner.sh"
+JSONFilePath="./_zkBitcoinMiner.conf"
 
 # Check if the JSON file exists
 if [ ! -f "$JSONFilePath" ]; then
@@ -153,4 +153,3 @@ while true; do
         break
     fi
 done
-
