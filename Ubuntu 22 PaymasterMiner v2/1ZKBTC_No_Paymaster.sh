@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 echo Normal minting costs us ETH and doesnt use the paymaster make sure UsePayMaster=false
-
 # Check if dotnet is installed
 if ! command -v dotnet &> /dev/null
 then
     echo "dotnet 6.0 is not found or not installed."
     echo "Installing dotnet 6.0..."
-    
+
     ubuntu_version=$(lsb_release -rs)
 
     # Handle Ubuntu 22.04 and prioritize the PMC repository for installation
-    if [[ "$ubuntu_version" == "22.04" ]]; then
+    if [[ "$ubuntu_version" == "22.04" || "$ubuntu_version" == "24.04" ]]; then
 
         # Download and install Microsoft package repository for Ubuntu 22.04
         echo "Downloading and installing Microsoft package repository for Ubuntu 22.04..."
@@ -20,12 +19,8 @@ then
 
         # Create apt preferences file to prioritize Microsoft repository
         echo "Configuring apt preferences to prioritize Microsoft repository..."
-        sudo touch /etc/apt/preferences
-        sudo bash -c 'cat <<EOF > /etc/apt/preferences
-Package: *
-Pin: origin "packages.microsoft.com"
-Pin-Priority: 1001
-EOF'
+
+        sudo cp preferences-temp /etc/apt/preferences
 
         # Update package information
         echo "Updating package information..."
@@ -69,6 +64,7 @@ EOF'
 else
     echo "dotnet 6.0 is already installed."
 fi
+
 
 # Path to your JSON file
 JSONFilePath="./_zkBitcoinMiner.conf"
