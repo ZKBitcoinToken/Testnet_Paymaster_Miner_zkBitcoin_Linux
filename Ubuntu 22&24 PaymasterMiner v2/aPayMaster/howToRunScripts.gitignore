@@ -1,0 +1,8 @@
+yarn hardhat deploy-zksync --script deploy-paymaster.ts
+
+yarn hardhat deploy-zksync --script deploy-blank.ts
+
+
+
+yarn hardhat deploy-zksync --script use-paymaster.ts
+
