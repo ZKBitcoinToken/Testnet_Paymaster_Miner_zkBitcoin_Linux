@@ -17,13 +17,10 @@ then
         target_version="$ubuntu_version"
     fi
 
-    # Add Microsoft package signing key and repository
-    wget https://packages.microsoft.com/config/ubuntu/$target_version/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-    sudo dpkg -i packages-microsoft-prod.deb
     sudo apt-get update; \
     sudo apt-get install -y apt-transport-https && \
     sudo apt-get update && \
-    sudo apt-get install -y dotnet-sdk-6.0
+    sudo apt install dotnet6
 
     # Verify the installation
     dotnet --version
