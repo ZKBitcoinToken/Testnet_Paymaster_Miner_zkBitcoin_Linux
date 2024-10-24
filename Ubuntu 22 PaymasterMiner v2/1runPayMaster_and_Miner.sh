@@ -26,8 +26,6 @@ then
     echo "Node.js is not found or not installed."
     echo "Download and install Node.js from https://nodejs.org/"
     sudo apt-get install -y nodejs
-
-    exit 1
 fi
 
 # Check if dotnet is installed
