@@ -1,6 +1,18 @@
 #!/usr/bin/env bash
 
 
+# Path to your JSON file
+JSONFilePath="./_zkBitcoinMiner.conf"
+
+# Check if the JSON file exists
+if [ ! -f "$JSONFilePath" ]; then
+    echo "JSON file not found: $JSONFilePath"
+    exit 1
+fi
+
+# Modify the UsePayMaster field
+sed -i 's/"UsePayMaster"[[:space:]]*:[[:space:]]*true/"UsePayMaster": false/' "$JSONFilePath"
+
 # Check if dotnet is installed
 if ! command -v dotnet &> /dev/null
 then
