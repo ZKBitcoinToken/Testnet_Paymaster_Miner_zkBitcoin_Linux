@@ -76,7 +76,8 @@ if [ ! -f "$JSONFilePath" ]; then
 fi
 
 # Modify the UsePayMaster field
-sed -i 's/UsePayMaster=true/UsePayMaster=false/g' "$JSONFilePath"
+sed -i 's/"UsePayMaster"[[:space:]]*:[[:space:]]*true/"UsePayMaster": false/' "$JSONFilePath"
+# Rest of your script...
 # Rest of your script...
 
 while : ; do
