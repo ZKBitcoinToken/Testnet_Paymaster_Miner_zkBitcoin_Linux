@@ -15,8 +15,6 @@ or
 
 <b>May need to run script a few times to install everything</b>
 <b>Script will restart computer after installing display driver graphics</b>
-<h2>To run the miner</h2>
-to run the miner after dependicies are all installed
 
 Mines normally using your eth account to mint the tokens
 
